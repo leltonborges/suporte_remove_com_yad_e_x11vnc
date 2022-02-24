@@ -28,7 +28,7 @@ function kill_PS_x11vnc(){
 
 function IPValid(){
     echo "1: $1"
-    isValid=$(echo "$1" | egrep -e "([0-9]{1,2}[\.]){3}[0-9]{1,3}")
+    isValid=$(echo "$1" | egrep -e "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
     [[ -z "$isValid" ]] && isCMD
     [[ -n "$isValid" ]] && run_x11vnc $1 
 }
